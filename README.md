@@ -24,12 +24,6 @@ One other thing that could be improved in the organizational strategy of *Infini
 Figure 2 - Adapter patterns referring to various unrelated subsystems
 </p>
 
-
-![Figure 2](./assets/adapters.png)
-<p align = "center">
-Figure 2 - Adapter patterns refering to various unrelated subsystems
-</p>
-
 ## Static Code Analysis
 
 Static code analysis is the process of inspecting source code to find possible defects. Many clean code bases enforce a strict static code analysis process. By statically analyzing source code, the introduction of poor practices such as security flaws, formatting issues, and code smells can be avoided. Ideally, issues such as these are identified and fixed before merging into master. Unfortunately, Infinity for Reddit does not strictly adhere to these practices, leading to an untidy codebase.
