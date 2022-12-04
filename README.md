@@ -1,12 +1,27 @@
 # Infinity for Reddit Codebase Analysis
 
+## Source Code Organization
+
+An important part of large software projects is how source code is created and organized throughout the project. A complex application such as *Infinity for Reddit* can easily have hundreds, if not thousands, of individual source code files. If these files are poorly organized it can quickly impair a developers ability to navigate a project. The becomes increasingly critical in open source projects, where many developers will be working on different components with little communication between eachother. Active open source projects also usually have many new contributors coming to the project who need to familiarize themself with the codebase. If not diligently enforced, code organization can spiral out of control and make it difficult for new and existing developers to interact with the codebase.
+
+*Infinity for Reddit* makes an attempt at organizing its code. All Java source files for the application are found in the package `ml.docilealligator.infinityforreddit`. In this base package, there are about 51 different files in here, each pretaining to a different purpose. Files such as `Infinity.java` are high level instances with manager the initalization and general operation of the application. Other classes found in this package such as `ReportThing.java` pretain to very specific functions of the app. Additionally, this base package contains another 30 subpackages. These subpackages contain 2 - 30 child files, and usually pretain to a certain function or pattern type. Subpackages, even the larger ones, rarely have any further internal organization. One package may serve a number of different functions.
+
+![Figure 1](./assets/root-directory.png)
+<p align = "center">
+Figure 1 - Loosely organized source files in the root directory
+</p>
+
+### TODO: Complete
+
 ## Static Code Analysis
 
 Static code analysis is the process of inspecting source code to find possible defects. Many clean code bases enforce a strict static code analysis process. By statically analyzing source code, the introduction of poor practices such as security flaws, formatting issues, and code smells can be avoided. Ideally, issues such as these are identified and fixed before merging into master. Unfortunately, Infinity for Reddit does not strictly adhere to these practices, leading to an untidy codebase.
 
-![Figure 1](./assets/android-studio-inspection-report.png)
+![Figure 2](./assets/android-studio-inspection-report.png)
+<p align = "center">
+Figure 2: Android Studio inspection report. This static code analysis discovered 13 errors, 5,715 warnings, and 2,373 potential typos.
+</p>
 
-Figure 1: Android Studio inspection report. This static code analysis discovered 13 errors, 5,715 warnings, and 2,373 potential typos.
 
 An easy method to inspect the current state of a project is to run code analysis on the entire project using Android Studio. Figure 1, above, shows the results of this analysis on Infinity for Reddit. A significant number of errors and warnings were discovered. It should be noted, not all the discovered issues necessarily need to be resolved. For example, a warning is being generated due to an unused no-argument constructor, but it is common practice to always expose a constructor with no arguments.
 
