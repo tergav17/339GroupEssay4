@@ -50,7 +50,7 @@ These critical issues are important to address as they yield the greatest risk o
 
 Although no single issue is a showstopper for the project on its own, Team 3 would argue the state of the codebase—through the lense of static code analysis—is poor. The culmination of thousands of issues has led to a sloppy and potentially unstable codebase. Without resolving these issues, compiling on a slightly different Java version, updating a package, or changing the wrong line of code could cause major issues within the application.
 
-**Testing And new code additions: **
+## Testing And new code additions
 Infininty For Reddit does not have any testing inside of the code base and has no requiement for testing any additons or changes that you make to the code base. In todays society it is important to make sure that changes made to code bases have the intended outcome before being rolled out to the user. Testing would take a little bit to get started since their would be a heavy back tracking to set up an adaquate testing frame used to test each functionality of the application. We belive the best style of testing would be to use unit testing to be able to quicky add new tests for new functionalities. Also with Infinity being a mobile application for UI changes it would be very beneficial to implement a form of Visual Regresstion. Testing visual componets of Infinity would verify the visual correctness of the feature in the application. With both of these implementaions a lot more of the curreent and past issues would have been dealt with before getting to the users attention. A few examples of these would be: 
 
 1. Remute video when clicking into post if muted by default (not yet merged) https://github.com/Docile-Alligator/Infinity-For-Reddit/pull/1230
