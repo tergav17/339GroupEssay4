@@ -83,3 +83,5 @@ Going forward, there are a few steps we recommend be taken to achieve better cod
 (https://stackoverflow.com/questions/3226282/are-there-best-practices-for-java-package-organization)
 
 [3] [Improve wiki link handling (#1184)](https://github.com/Docile-Alligator/Infinity-For-Reddit/pull/1184)
+
+https://www.softwaretestinghelp.com/visual-validation-testing/
