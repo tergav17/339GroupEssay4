@@ -50,10 +50,28 @@ These critical issues are important to address as they yield the greatest risk o
 
 Although no single issue is a showstopper for the project on its own, Team 3 would argue the state of the codebase—through the lense of static code analysis—is poor. The culmination of thousands of issues has led to a sloppy and potentially unstable codebase. Without resolving these issues, compiling on a slightly different Java version, updating a package, or changing the wrong line of code could cause major issues within the application.
 
+**Testing And new code additions: **
+Infininty For Reddit does not have any testing inside of the code base and has no requiement for testing any additons or changes that you make to the code base. In todays society it is important to make sure that changes made to code bases have the intended outcome before being rolled out to the user. Testing would take a little bit to get started since their would be a heavy back tracking to set up an adaquate testing frame used to test each functionality of the application. We belive the best style of testing would be to use unit testing to be able to quicky add new tests for new functionalities. Also with Infinity being a mobile application for UI changes it would be very beneficial to implement a form of Visual Regresstion. Testing visual componets of Infinity would verify the visual correctness of the feature in the application. With both of these implementaions a lot more of the curreent and past issues would have been dealt with before getting to the users attention. A few examples of these would be: 
+
+1. Remute video when clicking into post if muted by default (not yet merged) https://github.com/Docile-Alligator/Infinity-For-Reddit/pull/1230
+
+2. When selecting an account from the bottom sheet, currently the keyboard can get in the way. This adds a call to hide the keyboard whenever the bottom sheet is opened. https://github.com/Docile-Alligator/Infinity-For-Reddit/pull/1231
+
+3. Comment sorting method not saving #1233 which was addressed in https://github.com/Docile-Alligator/Infinity-For-Reddit/commit/ff10eb5f92810f2f1a1ca2ba5617a035957509ad
+
+With the muting video pull request (1). Writing unit tests for different interaction that the user can do when interacting with videos would have alowed for the developer to catch that the videos were becoming unmuted unexpectedly. For the selecting an account creating a popup keyboard that obstructs switching accounts (2). This error would have been caught with a Visual Regresstion test because it would have allowed for when slecting a different user to be a smooth process and would have been able to catch the visual error in the application. 
+
+When implementing unit testing it is important to make sure every test returns a pass or fail and a quick and easy way to identify which test failed. Also with estenisve testing it would allow a new developer who wants to correct a feature or change  to see how the current implementaion of the feature works. This would allow for the developer to see exactly how the current feature is run and what functions are needed to complete the acion in the application.
+
 Going forward, there are a few steps we recommend be taken to achieve better code quality:
 
 1. There should be a well-documented set standards present in the repository which are enforced when considering all changes. Any PRs going against these standards must justify the reasoning.
 2. Time should be taken to perform rework and reduce the statically identified issues.
+3. There shoul be a standard that requires unit testing for all changes made to the code base.
+4. Implement Visual Regresstion testing to allow for faster catching of UI bugs that could be app breaking for the user.
+
+
+
 
 
 # References
