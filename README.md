@@ -36,7 +36,7 @@ Figure 3: Android Studio inspection report. This static code analysis discovered
 </p>
 
 
-An easy method to inspect the current state of a project is to run a code analysis on the entire project using Android Studio. Figure 3, above, shows the results of this analysis on Infinity for Reddit. A significant number of errors and warnings were discovered which indicates room for improvement within the codebase.
+A common method to inspect an Android project is to run a code analysis using Android Studio. Figure 3, above, shows the results of this analysis on Infinity for Reddit. A significant number of errors and warnings were discovered, indicating room for improvement within the codebase.
 
 > Note: to run your own static code analysis of the repository in Android Studio, click 'Code', 'Inspect Code', 'Whole Project', and 'OK'.
 
@@ -48,9 +48,9 @@ The inspection calls out a variety of issues within the codebase, each with a va
 
 These critical issues are important to address as they yield the greatest risk of builds failing or runtime errors. The good news about the analysis is many of the reported issues are low severity and unlikely to impact the end user. Many of these issues can be resolved manually or even automatically by an IDE.
 
-Although no single issue is a showstopper for the project on its own, Team 3 would argue the state of the codebase—through the lense of static code analysis—is poor. The culmination of thousands of issues has led to a sloppy and potentially unstable codebase.
+Although no single issue is a showstopper for the project on its own, Team 3 would argue the state of the codebase—through the lense of static code analysis—is poor. The culmination of thousands of issues has led to a sloppy and potentially unstable codebase. Without resolving these issues, compiling on a slightly different Java version, updating a package, or changing the wrong line of code could cause major issues within the application.
 
-Going forward, there are a few steps we recommend be taken to strive for better code quality:
+Going forward, there are a few steps we recommend be taken to achieve better code quality:
 
 1. There should be a well-documented set standards present in the repository which are enforced when considering all changes. Any PRs going against these standards must justify the reasoning.
 2. Time should be taken to perform rework and reduce the statically identified issues.
