@@ -72,11 +72,9 @@ Going forward, there are a few steps we recommend be taken to achieve better cod
 
 # References
 
-[1] [Java package naming conventions]
-(https://www.geeksforgeeks.org/java-naming-conventions/)
+[1] [Java package naming conventions](https://www.geeksforgeeks.org/java-naming-conventions/)
 
-[2] [Best practices for Java package organization]
-(https://stackoverflow.com/questions/3226282/are-there-best-practices-for-java-package-organization)
+[2] [Best practices for Java package organization](https://stackoverflow.com/questions/3226282/are-there-best-practices-for-java-package-organization)
 
 [3] [Improve wiki link handling (#1184)](https://github.com/Docile-Alligator/Infinity-For-Reddit/pull/1184)
 
