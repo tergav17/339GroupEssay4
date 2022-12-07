@@ -27,7 +27,7 @@ Figure 2 - Sources files in the 'adapters' package referring to various unrelate
 
 ## Static Code Analysis
 
-Static code analysis is the process of inspecting source code to find possible defects. Many clean code bases enforce a strict static code analysis process. By statically analyzing source code, the introduction of poor practices such as security flaws, formatting issues, and code smells can be avoided. Ideally, issues such as these are identified and fixed before merging into master. Unfortunately, Infinity for Reddit does not strictly adhere to these practices, leading to an untidy codebase.
+Static code analysis is the process of inspecting source code to find possible defects. Many clean codebases enforce a strict static code analysis process. By statically analyzing source code, the introduction of poor practices such as security flaws, formatting issues, and code smells can be avoided. Ideally, issues such as these are identified and fixed before merging into master. Unfortunately, Infinity for Reddit does not strictly adhere to these practices, leading to an untidy codebase.
 
 
 <p align = "center">
@@ -48,10 +48,10 @@ The inspection calls out a variety of issues within the codebase, each with a va
 
 These critical issues are important to address as they yield the greatest risk of builds failing or runtime errors. The good news about the analysis is many of the reported issues are low severity and unlikely to impact the end user. Many of these issues can be resolved manually or even automatically by an IDE.
 
-Although no single issue is a showstopper for the project on its own, Team 3 would argue the state of the codebase—through the lense of static code analysis—is poor. The culmination of thousands of issues has led to a sloppy and potentially unstable codebase. Without resolving these issues, compiling on a slightly different Java version, updating a package, or changing the wrong line of code could cause major issues within the application.
+Although no single issue is a showstopper for the project on its own, Team 3 would argue the state of the codebase—through the lens of static code analysis—is poor. The culmination of thousands of issues has led to a sloppy and potentially unstable codebase. Without resolving these issues, compiling on a slightly different Java version, updating a package, or changing the wrong line of code could cause major issues within the application.
 
-## Testing And new code additions
-Infininty For Reddit does not have any testing inside of the code base and has no requiement for testing any additons or changes that you make to the code base. In todays society it is important to make sure that changes made to code bases have the intended outcome before being rolled out to the user. Testing would take a little bit to get started since their would be a heavy back tracking to set up an adaquate testing frame used to test each functionality of the application. We belive the best style of testing would be to use unit testing to be able to quicky add new tests for new functionalities. Also with Infinity being a mobile application for UI changes it would be very beneficial to implement a form of Visual Regresstion. Testing visual componets of Infinity would verify the visual correctness of the feature in the application. With both of these implementaions a lot more of the curreent and past issues would have been dealt with before getting to the users attention. A few examples of these would be: 
+## Testing and Codebase Additions
+Infinity For Reddit does not have any testing inside of the codebase and has no requirement for testing any additions or changes that you make to the codebase. In todays society it is important to make sure that changes made to codebases have the intended outcome before being rolled out to the user. Adding testing to the codebase would take moderate effort since the developers would have to back track through previously added features to set up an adequate testing frame that tests every function of the app. We believe that implementing unit testing and Visual Regression testing would be beneficial to the codebase. By implementing unit testing, it would create a simple interface to quickly add new tests when adding new functionality. Since Infinity for Reddit is a mobile app, Visual Regression would allow for visual components to be tested for correctness before being merged into the main branch of the codebase. Implementing these automated testing methods would allow for various issues to be caught prior to being seen by the user. A few examples of these would be: 
 
 1. Remute video when clicking into post if muted by default (not yet merged) https://github.com/Docile-Alligator/Infinity-For-Reddit/pull/1230
 
@@ -59,29 +59,23 @@ Infininty For Reddit does not have any testing inside of the code base and has n
 
 3. Comment sorting method not saving #1233 which was addressed in https://github.com/Docile-Alligator/Infinity-For-Reddit/commit/ff10eb5f92810f2f1a1ca2ba5617a035957509ad
 
-With the muting video pull request (1). Writing unit tests for different interaction that the user can do when interacting with videos would have alowed for the developer to catch that the videos were becoming unmuted unexpectedly. For the selecting an account creating a popup keyboard that obstructs switching accounts (2). This error would have been caught with a Visual Regresstion test because it would have allowed for when slecting a different user to be a smooth process and would have been able to catch the visual error in the application. 
+With the muting video pull request (1), writing unit tests for different interaction that the user can do when interacting with videos would have allowed for the developer to catch that the videos were becoming unmuted unexpectedly. For the selecting an account creating a popup keyboard that obstructs switching accounts (2), this error would have been caught with Visual Regression testing as it would have tested selecting a different user to ensure that it was a smooth process with no visual issues. As for selected comment sorting methods not saving (3), this would have been caught by unit tests which would ensure that all functionality in the app works correctly by testing comment sorting automatically.
 
-When implementing unit testing it is important to make sure every test returns a pass or fail and a quick and easy way to identify which test failed. Also with estenisve testing it would allow a new developer who wants to correct a feature or change  to see how the current implementaion of the feature works. This would allow for the developer to see exactly how the current feature is run and what functions are needed to complete the acion in the application.
+When implementing unit testing it is important to make sure every test returns a pass or fail and a quick and easy way to identify which test failed. Also with extensive testing it would allow a new developer who wants to correct a feature or change to see how the current implementation of the feature works. This would allow for the developer to see exactly how the current feature is run and what functions are needed to complete the action in the application.
 
 Going forward, there are a few steps we recommend be taken to achieve better code quality:
 
-1. There should be a well-documented set standards present in the repository which are enforced when considering all changes. Any PRs going against these standards must justify the reasoning.
+1. There should be well-documented set standards present in the repository which are enforced when considering all changes. Any PRs going against these standards must justify the reasoning.
 2. Time should be taken to perform rework and reduce the statically identified issues.
-3. There shoul be a standard that requires unit testing for all changes made to the code base.
-4. Implement Visual Regresstion testing to allow for faster catching of UI bugs that could be app breaking for the user.
-
-
-
-
+3. There should be a standard that requires unit testing for all changes made to the codebase.
+4. Implement Visual Regression testing to allow for faster catching of UI bugs that could be app breaking for the user.
 
 # References
 
-[1] [Java package naming conventions]
-(https://www.geeksforgeeks.org/java-naming-conventions/)
+[1] [Java package naming conventions](https://www.geeksforgeeks.org/java-naming-conventions/)
 
-[2] [Best practices for Java package organization]
-(https://stackoverflow.com/questions/3226282/are-there-best-practices-for-java-package-organization)
+[2] [Best practices for Java package organization](https://stackoverflow.com/questions/3226282/are-there-best-practices-for-java-package-organization)
 
 [3] [Improve wiki link handling (#1184)](https://github.com/Docile-Alligator/Infinity-For-Reddit/pull/1184)
 
-https://www.softwaretestinghelp.com/visual-validation-testing/
+[4] [Visual Validation Testing](https://www.softwaretestinghelp.com/visual-validation-testing/)
